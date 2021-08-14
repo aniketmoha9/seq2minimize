@@ -4,4 +4,4 @@ This repository can be currently used for minimization of peptides
 rdkit 
 openmm
 # command to run the scripts
-python main.py 1 AG(single letter code) 1(number of copies per dihedral
+python main.py 1 AG(single letter code) 1(number of copies per dihedral)
