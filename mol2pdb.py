@@ -102,3 +102,20 @@ def ffminimization(file, output_path):
     print('Saving...')
     positions = simulation.context.getState(getPositions=True).getPositions()
     PDBFile.writeFile(simulation.topology, positions, open(output_path, 'w'))
+    
+    
+   
+def backbone_dihedrals(mol):
+    N=[0]
+    substructure = Chem.MolFromSmarts('CNC(=O)')
+    for item in mol.GetSubstructMatches(substructure):
+        N.append(item[1])
+    N = list(set(N))
+    N.sort()
+    dihedral = []
+    for i in range(len(N)-1):
+        dihedral.append([N[i], N[i]+1, N[i]+2, N[i+1]])
+        dihedral.append([N[i]+1, N[i]+2, N[i+1], N[i+1]+1])
+        dihedral.append([N[i]+2, N[i+1], N[i+1]+1, N[i+1]+2])
+    
+    return dihedral
