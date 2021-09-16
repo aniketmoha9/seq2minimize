@@ -1,0 +1,81 @@
+REMARK  Name = ARSASA.pdb
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  CA  SER A  3       -1.124   0.117  -0.902  0.00  0.00    +0.205 C 
+ENDROOT
+BRANCH   1   2
+ATOM      2  C   SER A  3       -0.015  -0.559   0.011  0.00  0.00    +0.264 C 
+ATOM      3  N   ALA A  4        1.278  -0.808  -0.477  0.00  0.00    -0.196 NA
+ATOM      4  O   SER A  3       -0.341  -0.851   1.161  0.00  0.00    -0.271 OA
+BRANCH   3   5
+ATOM      5  CA  ALA A  4        2.260  -1.483   0.547  0.00  0.00    +0.173 C 
+ATOM      6  CB  ALA A  4        1.865  -3.036   0.038  0.00  0.00    +0.033 C 
+BRANCH   5   7
+ATOM      7  C   ALA A  4        3.593  -1.387  -0.393  0.00  0.00    +0.262 C 
+ATOM      8  N   SER A  5        4.754  -1.957   0.114  0.00  0.00    -0.194 NA
+ATOM      9  O   ALA A  4        3.493  -0.831  -1.472  0.00  0.00    -0.271 OA
+BRANCH   8  10
+ATOM     10  CA  SER A  5        5.970  -1.816  -0.850  0.00  0.00    +0.205 C 
+BRANCH  10  11
+ATOM     11  C   SER A  5        6.907  -0.878   0.008  0.00  0.00    +0.264 C 
+ATOM     12  N   ALA A  6        8.198  -0.582  -0.412  0.00  0.00    -0.194 NA
+ATOM     13  O   SER A  5        6.457  -0.412   1.072  0.00  0.00    -0.271 OA
+BRANCH  12  14
+ATOM     14  CA  ALA A  6        9.082   0.361   0.481  0.00  0.00    +0.198 C 
+ATOM     15  CB  ALA A  6       10.472  -0.530   0.153  0.00  0.00    +0.036 C 
+BRANCH  14  16
+ATOM     16  C   ALA A  6        9.367   1.471  -0.581  0.00  0.00    +0.384 C 
+ATOM     17  OXT ALA A  6        9.991   2.607  -0.184  0.00  0.00    -0.244 OA
+ATOM     18  O   ALA A  6        9.006   1.245  -1.696  0.00  0.00    -0.244 OA
+ENDBRANCH  14  16
+ENDBRANCH  12  14
+ENDBRANCH  10  11
+BRANCH  10  19
+ATOM     19  CB  SER A  5        6.644  -3.243  -0.403  0.00  0.00    +0.213 C 
+ATOM     20  OG  SER A  5        6.808  -3.008   0.957  0.00  0.00    -0.218 OA
+ENDBRANCH  10  19
+ENDBRANCH   8  10
+ENDBRANCH   5   7
+ENDBRANCH   3   5
+ENDBRANCH   1   2
+BRANCH   1  22
+ATOM     21  C   ARG A  2       -3.466   0.669  -0.069  0.00  0.00    +0.262 C 
+ATOM     22  N   SER A  3       -2.185   0.352   0.228  0.00  0.00    -0.194 NA
+ATOM     23  O   ARG A  2       -3.897   0.772  -1.186  0.00  0.00    -0.271 OA
+BRANCH  21  24
+ATOM     24  CA  ARG A  2       -4.394   0.912   1.146  0.00  0.00    +0.173 C 
+BRANCH  24  26
+ATOM     25  C   ALA A  1       -5.744   2.712   0.056  0.00  0.00    +0.259 C 
+ATOM     26  N   ARG A  2       -5.690   1.353   0.388  0.00  0.00    -0.197 NA
+ATOM     27  O   ALA A  1       -4.846   3.551   0.329  0.00  0.00    -0.272 OA
+BRANCH  25  29
+ATOM     28  N   ALA A  1       -7.806   2.037  -0.864  0.00  0.00    -0.123 NA
+ATOM     29  CA  ALA A  1       -6.965   3.356  -0.714  0.00  0.00    +0.169 C 
+ATOM     30  CB  ALA A  1       -7.768   3.801   0.684  0.00  0.00    +0.030 C 
+ENDBRANCH  25  29
+ENDBRANCH  24  26
+BRANCH  24  31
+ATOM     31  CB  ARG A  2       -4.901  -0.566   1.521  0.00  0.00    +0.035 C 
+BRANCH  31  32
+ATOM     32  CG  ARG A  2       -5.241  -1.434   0.476  0.00  0.00    +0.049 C 
+BRANCH  32  33
+ATOM     33  CD  ARG A  2       -6.354  -1.181  -0.456  0.00  0.00    +0.220 C 
+BRANCH  33  34
+ATOM     34  NE  ARG A  2       -7.652  -1.125   0.231  0.00  0.00    -0.087 NA
+BRANCH  34  35
+ATOM     35  CZ  ARG A  2       -8.854  -0.982  -0.534  0.00  0.00    +0.535 C 
+ATOM     36  NH2 ARG A  2      -10.143  -0.815  -0.001  0.00  0.00    +0.135 NA
+ATOM     37  NH1 ARG A  2       -8.705  -1.012  -1.816  0.00  0.00    +0.135 NA
+ENDBRANCH  34  35
+ENDBRANCH  33  34
+ENDBRANCH  32  33
+ENDBRANCH  31  32
+ENDBRANCH  24  31
+ENDBRANCH  21  24
+ENDBRANCH   1  22
+BRANCH   1  38
+ATOM     38  CB  SER A  3       -0.509   1.658  -0.865  0.00  0.00    +0.213 C 
+ATOM     39  OG  SER A  3        0.456   1.523  -1.860  0.00  0.00    -0.218 OA
+ENDBRANCH   1  38
+TORSDOF 18
