@@ -10,6 +10,7 @@ from simtk.openmm import *
 from simtk.unit import *
 from sys import stdout
 import glob
+from Bio.PDB import *
 
 
 def interprete(seq):
@@ -119,3 +120,26 @@ def backbone_dihedrals(mol):
         dihedral.append([N[i]+2, N[i+1], N[i+1]+1, N[i+1]+2])
     
     return dihedral
+
+def point_mutation(ref_file, alt_file):
+    parser = PDBParser(PERMISSIVE = True, QUIET = True)
+    ref_structure = parser.get_structure('peptide_structure', ref_file)
+    alt_structure = parser.get_structure('mutated_structure', alt_file)
+    ref_atoms = []
+    alt_atoms = []
+    for (ref_model, alt_model) in zip(ref_structure, alt_structure):
+        for (ref_chain, alt_chain) in zip(ref_model, alt_model):
+            for (ref_res, alt_res, amino, allow) in zip(ref_chain, alt_chain, seq_str, use):
+                ref_atoms.append(ref_res['CA'])
+                alt_atoms.append(alt_res['CA'])
+                
+    super_imposer = Superimposer()
+    super_imposer.set_atoms(ref_atoms, alt_atoms)
+    super_imposer.apply(alt_model.get_atoms())
+    print(alt_model.id, super_imposer.rms)
+    io=PDBIO()
+    io.set_structure(alt_structure)
+    filename = 'mut_{}'.format(alt_file)
+    io.save(filename)
+    
+    return filename
