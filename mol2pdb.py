@@ -53,39 +53,39 @@ def clean_pdb(file, path):
 
         
         
-def get_dihedrals(mol):
-    dihedral = []
-    for i, bond in enumerate(mol.GetBonds()):
-        if bond.GetBondTypeAsDouble()==1 and bond.IsInRing()==False:
-            atomB = bond.GetBeginAtom()
-            atomE = bond.GetEndAtom()
+# def get_dihedrals(mol):
+#     dihedral = []
+#     for i, bond in enumerate(mol.GetBonds()):
+#         if bond.GetBondTypeAsDouble()==1 and bond.IsInRing()==False:
+#             atomB = bond.GetBeginAtom()
+#             atomE = bond.GetEndAtom()
         
-            neighB = []
-            neighE = []
+#             neighB = []
+#             neighE = []
 
 
-            for atom in atomB.GetNeighbors():
-                if atom.GetIdx() != atomE.GetIdx():
-                    neighB.append(atom.GetIdx())
+#             for atom in atomB.GetNeighbors():
+#                 if atom.GetIdx() != atomE.GetIdx():
+#                     neighB.append(atom.GetIdx())
                 
-            for atom in atomE.GetNeighbors():
-                if atom.GetIdx() != atomB.GetIdx():
-                    neighE.append(atom.GetIdx())
+#             for atom in atomE.GetNeighbors():
+#                 if atom.GetIdx() != atomB.GetIdx():
+#                     neighE.append(atom.GetIdx())
 
-            if neighB==[] or neighE==[]:
-                continue
+#             if neighB==[] or neighE==[]:
+#                 continue
         
-            if len(neighB)>len(neighE):
+#             if len(neighB)>len(neighE):
             
-                for i in range(len(neighB)):
-                    for j in range(len(neighE)):
-                        dihedral.append([neighB[i], atomB.GetIdx(), atomE.GetIdx(), neighE[j]])
+#                 for i in range(len(neighB)):
+#                     for j in range(len(neighE)):
+#                         dihedral.append([neighB[i], atomB.GetIdx(), atomE.GetIdx(), neighE[j]])
                     
-            else:
-                for i in range(len(neighE)):
-                    for j in range(len(neighB)):
-                        dihedral.append([neighB[j], atomB.GetIdx(), atomE.GetIdx(), neighE[i]])
-    return dihedral        
+#             else:
+#                 for i in range(len(neighE)):
+#                     for j in range(len(neighB)):
+#                         dihedral.append([neighB[j], atomB.GetIdx(), atomE.GetIdx(), neighE[i]])
+#     return dihedral        
 
         
 
@@ -106,7 +106,7 @@ def ffminimization(file, output_path):
     
     
    
-def backbone_dihedrals(mol):
+def get_dihedrals(mol):
     N=[0]
     substructure = Chem.MolFromSmarts('CNC(=O)')
     for item in mol.GetSubstructMatches(substructure):
