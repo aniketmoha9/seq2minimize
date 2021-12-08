@@ -6,6 +6,7 @@ from rdkit.Chem import rdchem
 from rdkit.Chem import rdmolfiles
 from rdkit.Chem import rdmolops
 from rdkit.Chem import AllChem
+import pandas as pd
 
 if sys.argv[1]==3:
     seq = interprete(sys.argv[2])
