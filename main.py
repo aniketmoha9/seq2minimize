@@ -45,7 +45,7 @@ conf=mol.GetConformer(0) #get a conformation from the mol file
 #         ffminimization(file_path, '{}/minimized/{}_{}_{}_Hs_output.pdb'.format(seq, seq, m, i))
 # print('done')
 
-
+a = np.arange(-180, 180, 10)
 for i in range(0, len(dihedral), 3):
     for j in range(int(sys.argv[3])):
         if 'P' in seq:
