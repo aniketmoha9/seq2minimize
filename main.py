@@ -51,14 +51,10 @@ for i in range(0, len(dihedral), 3):
         if 'P' in seq:
             idx = seq.index('P')
             if i==(idx-1)*3:
-                mol = Chem.MolFromPDBFile(mol_file)
-                conf=mol.GetConformer(0)
                 psi_ang = float(np.random.choice(a))
                 psi_atm = dihedral[i]
                 Chem.rdMolTransforms.SetDihedralDeg(conf, psi_atm[0], psi_atm[1], psi_atm[2], psi_atm[3], psi_ang)
         else:
-            mol = Chem.MolFromPDBFile(mol_file)
-            conf=mol.GetConformer(0)
             phi_atm = dihedral[i+2]
             psi_atm = dihedral[i]
             omega_atm = dihedral[i+1]
