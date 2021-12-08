@@ -42,6 +42,6 @@ for m,a in enumerate(dihedral):
         file_path = clean_pdb(file, '{}/{}_{}_{}_Hs.pdb'.format(seq, 'dih', m, i))
         if os.path.isdir('{}/minimized'.format(seq))==False:
             os.mkdir('{}/minimized'.format(seq))
-        ffminimization(file_path, 'minimized/{}_{}_{}_Hs_output.pdb'.format(seq, m, i))
+        ffminimization(file_path, '{}/minimized/{}_{}_{}_Hs_output.pdb'.format(seq, seq, m, i))
 print('done')
 
