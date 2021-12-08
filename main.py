@@ -44,7 +44,7 @@ conf=mol.GetConformer(0) #get a conformation from the mol file
 #             os.mkdir('{}/minimized'.format(seq))
 #         ffminimization(file_path, '{}/minimized/{}_{}_{}_Hs_output.pdb'.format(seq, seq, m, i))
 # print('done')
-
+df1 = pd.read_csv('dunbrack_peptide_lib.csv')
 a = np.arange(-180, 180, 10)
 for i in range(0, len(dihedral), 3):
     for j in range(int(sys.argv[3])):
